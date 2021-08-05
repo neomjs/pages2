@@ -6,6 +6,8 @@ package-lock.json
 /docs/output
 /examples
 
+/node_modules
+
 !/node_modules/d3-array/dist/d3-array.js
 !/node_modules/d3-color/dist/d3-color.js
 !/node_modules/d3-format/dist/d3-format.js
@@ -20,8 +22,6 @@ package-lock.json
 !/node_modules/@d3fc/d3fc-rebind/build/d3fc-rebind.js
 !/node_modules/@d3fc/d3fc-series/build/d3fc-series.js
 !/node_modules/@d3fc/d3fc-webgl/build/d3fc-webgl.js
-
-/node_modules
 
 # IDEs and editors
 /.idea
