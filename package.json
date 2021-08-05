@@ -1,0 +1,22 @@
+{
+    "name": "neo.mjs-pages2",
+    "version": "1.0.0",
+    "description": "neo.mjs: Github Pages",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/neomjs/pages2.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Tobias Uhlig",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/neomjs/pages2/issues"
+    },
+    "homepage": "https://neomjs.github.io/pages2/",
+    "dependencies": {
+        "neo-offscreen-canvas-demo": "^1.0.1"
+    }
+}
