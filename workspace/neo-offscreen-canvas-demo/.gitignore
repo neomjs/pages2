@@ -23,6 +23,8 @@ package-lock.json
 !/node_modules/@d3fc/d3fc-series/build/d3fc-series.js
 !/node_modules/@d3fc/d3fc-webgl/build/d3fc-webgl.js
 
+!/node_modules/neo.mjs/src
+
 # IDEs and editors
 /.idea
 .project
