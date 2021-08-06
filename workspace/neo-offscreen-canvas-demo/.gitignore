@@ -17,6 +17,7 @@ package-lock.json
 !/node_modules/d3-scale/dist/d3-scale.js
 !/node_modules/d3-shape/dist/d3-shape.js
 !/node_modules/d3-time-format/dist/d3-time-format.js
+!/node_modules/@d3fc/d3fc-element/build/d3fc-element.js
 !/node_modules/@d3fc/d3fc-extent/build/d3fc-extent.js
 !/node_modules/@d3fc/d3fc-random-data/build/d3fc-random-data.js
 !/node_modules/@d3fc/d3fc-rebind/build/d3fc-rebind.js
