@@ -155,24 +155,24 @@ class Helper extends Base {
         let me         = this,
             colorScale = d3.scaleOrdinal(d3.schemeAccent),
 
-        series = fc
-            .seriesWebglPoint()
-            .xScale(me.xScale)
-            .yScale(me.yScale)
-            .crossValue(d => d.x)
-            .mainValue(d => d.y)
-            .size(d => d.size)
-            .equals(previousData => previousData.length > 0),
+            series = fc
+                .seriesWebglPoint()
+                .xScale(me.xScale)
+                .yScale(me.yScale)
+                .crossValue(d => d.x)
+                .mainValue(d => d.y)
+                .size(d => d.size)
+                .equals(previousData => previousData.length > 0),
 
-        webglColor = color => {
-            let { r, g, b, opacity } = d3.color(color).rgb();
-            return [r / 255, g / 255, b / 255, opacity];
-        },
+            webglColor = color => {
+                let { r, g, b, opacity } = d3.color(color).rgb();
+                return [r / 255, g / 255, b / 255, opacity];
+            },
 
-        fillColor = fc
-            .webglFillColor()
-            .value((d, i) => webglColor(colorScale(i)))
-            .data(me.data);
+            fillColor = fc
+                .webglFillColor()
+                .value((d, i) => webglColor(colorScale(i)))
+                .data(me.data);
 
         series.decorate(program => fillColor(program));
 
@@ -185,31 +185,33 @@ class Helper extends Base {
      */
     async promiseImportD3() {
         let imports = [
-            import('../../../node_modules/d3-array/dist/d3-array.js'),
-            import('../../../node_modules/d3-color/dist/d3-color.js'),
-            import('../../../node_modules/d3-format/dist/d3-format.js'),
-            import('../../../node_modules/d3-interpolate/dist/d3-interpolate.js'),
-            import('../../../node_modules/d3-scale-chromatic/dist/d3-scale-chromatic.js'),
-            import('../../../node_modules/d3-random/dist/d3-random.js'),
-            import('../../../node_modules/d3-scale/dist/d3-scale.js'),
-            import('../../../node_modules/d3-shape/dist/d3-shape.js'),
-            import('../../../node_modules/d3-time-format/dist/d3-time-format.js'),
-            import('../../../node_modules/@d3fc/d3fc-extent/build/d3fc-extent.js'),
-            import('../../../node_modules/@d3fc/d3fc-random-data/build/d3fc-random-data.js'),
-            import('../../../node_modules/@d3fc/d3fc-rebind/build/d3fc-rebind.js'),
-            import('../../../node_modules/@d3fc/d3fc-series/build/d3fc-series.js'),
-            import('../../../node_modules/@d3fc/d3fc-webgl/build/d3fc-webgl.js')
-        ],
+                () => import('../../../node_modules/d3-array/dist/d3-array.js'),
+                () => import('../../../node_modules/d3-color/dist/d3-color.js'),
+                () => import('../../../node_modules/d3-format/dist/d3-format.js'),
+                () => import('../../../node_modules/d3-interpolate/dist/d3-interpolate.js'),
+                () => import('../../../node_modules/d3-scale-chromatic/dist/d3-scale-chromatic.js'),
+                () => import('../../../node_modules/d3-random/dist/d3-random.js'),
+                () => import('../../../node_modules/d3-scale/dist/d3-scale.js'),
+                () => import('../../../node_modules/d3-shape/dist/d3-shape.js'),
+                () => import('../../../node_modules/d3-time-format/dist/d3-time-format.js'),
+                () => import('../../../node_modules/@d3fc/d3fc-extent/build/d3fc-extent.js'),
+                () => import('../../../node_modules/@d3fc/d3fc-random-data/build/d3fc-random-data.js'),
+                () => import('../../../node_modules/@d3fc/d3fc-rebind/build/d3fc-rebind.js'),
+                () => import('../../../node_modules/@d3fc/d3fc-series/build/d3fc-series.js'),
+                () => import('../../../node_modules/@d3fc/d3fc-webgl/build/d3fc-webgl.js')
+            ],
 
-        modules = [],
-        item;
+            modules = [],
+            i       = 0,
+            len     = imports.length,
+            item;
 
-        for (const request of imports) {
-            item = await request;
+        for (; i < len; i++) {
+            item = await imports[i]();
             modules.push(item);
         }
 
-        // Bug: Inside the webpack based dist envs, 3dfc will copy its function to the module,
+        // Bug: Inside the webpack based dist envs, d3fc will copy its function to the module,
         // instead of putting them into the global fc namespace.
         // This hack resolves it.
         if (!self.fc) {
