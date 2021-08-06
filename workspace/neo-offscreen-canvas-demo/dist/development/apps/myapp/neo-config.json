@@ -8,5 +8,6 @@
     ],
     "useCanvasWorker": true,
     "useFontAwesome": false,
+    "useGoogleAnalytics": true,
     "workerBasePath": "../../"
 }
