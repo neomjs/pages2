@@ -6,6 +6,8 @@ package-lock.json
 /docs/output
 /node_modules
 
+!/node_modules/neo.mjs/src
+
 # IDEs and editors
 /.idea
 .project
