@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmainapp=self.webpackChunkmainapp||[]).push([[4],{8004:(a,n,p)=>{p.r(n),p.d(n,{onStart:()=>s});const s=()=>{console.log("ChildApp canvas worker onStart()")}}}]);

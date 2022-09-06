@@ -1,0 +1,9 @@
+{
+    "appPath": "apps/childapp/app.mjs",
+    "basePath": "../../../../",
+    "environment": "dist/development",
+    "mainPath": "../main.js",
+    "useCanvasWorker": true,
+    "useSharedWorkers": true,
+    "workerBasePath": "../../"
+}

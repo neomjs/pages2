@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmainapp=self.webpackChunkmainapp||[]).push([[136],{136:(a,e,n)=>{n.r(e),n.d(e,{onStart:()=>s});var p=n(668);class t extends p.Z{static getConfig(){return{className:"ChildApp.view.MainContainer",autoMount:!0,layout:{ntype:"fit"}}}}Neo.applyClassConfig(t);const i=t,s=()=>Neo.app({mainView:i,name:"ChildApp"})}}]);
