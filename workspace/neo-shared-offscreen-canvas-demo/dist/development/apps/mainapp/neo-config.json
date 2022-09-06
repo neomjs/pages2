@@ -4,6 +4,8 @@
     "environment": "dist/development",
     "mainPath": "../main.js",
     "useCanvasWorker": true,
+    "useFontAwesome": false,
+    "useGoogleAnalytics": true,
     "useSharedWorkers": true,
     "workerBasePath": "../../"
 }

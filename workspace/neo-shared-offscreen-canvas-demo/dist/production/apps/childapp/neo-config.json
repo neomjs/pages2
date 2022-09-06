@@ -1,1 +1,1 @@
-{"appPath":"apps/childapp/app.mjs","basePath":"../../../../","mainPath":"../main.js","useCanvasWorker":true,"useSharedWorkers":true,"workerBasePath":"../../"}
+{"appPath":"apps/childapp/app.mjs","basePath":"../../../../","mainPath":"../main.js","useCanvasWorker":true,"useFontAwesome":false,"useGoogleAnalytics":true,"useSharedWorkers":true,"workerBasePath":"../../"}
