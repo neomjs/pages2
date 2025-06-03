@@ -1,1 +1,1 @@
-import s from"./Text.mjs";class e extends s{static getConfig(){return{className:"Neo.form.field.Password",ntype:"passwordfield",inputType:"password"}}}Neo.applyClassConfig(e);export{e as default};
+import s from"./Text.mjs";export default Neo.setupClass(class extends s{static config={className:"Neo.form.field.Password",ntype:"passwordfield",inputType:"password"}});

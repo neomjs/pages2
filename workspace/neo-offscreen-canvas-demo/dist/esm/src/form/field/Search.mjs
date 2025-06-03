@@ -1,1 +1,1 @@
-import e from"./Text.mjs";class a extends e{static getConfig(){return{className:"Neo.form.field.Search",ntype:"searchfield",cls:["neo-searchfield","neo-textfield"],hideLabel:!0,placeholderText:"Search"}}}Neo.applyClassConfig(a);export{a as default};
+import e from"./Text.mjs";export default Neo.setupClass(class extends e{static config={className:"Neo.form.field.Search",ntype:"searchfield",baseCls:["neo-searchfield","neo-textfield"],hideLabel:!0,placeholderText:"Search"}});

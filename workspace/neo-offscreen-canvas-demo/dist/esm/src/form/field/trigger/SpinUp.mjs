@@ -1,1 +1,1 @@
-import e from"./Base.mjs";class i extends e{static getConfig(){return{className:"Neo.form.field.trigger.SpinUp",ntype:"trigger-spinup",iconCls:"fa fa-chevron-right",type:"spinup"}}onTriggerClick(e){this.field.onSpinButtonUpClick()}}Neo.applyClassConfig(i);export{i as default};
+import e from"./Base.mjs";export default Neo.setupClass(class extends e{static config={className:"Neo.form.field.trigger.SpinUp",ntype:"trigger-spinup",iconCls:"fa fa-chevron-right",type:"spinup"};onTriggerClick(e){this.field.onSpinButtonUpClick()}});

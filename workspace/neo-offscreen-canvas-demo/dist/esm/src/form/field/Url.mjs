@@ -1,1 +1,1 @@
-import e from"./Text.mjs";class t extends e{static getConfig(){return{className:"Neo.form.field.Url",ntype:"urlfield",inputType:"url"}}}Neo.applyClassConfig(t);export{t as default};
+import t from"./Text.mjs";export default Neo.setupClass(class extends t{static config={className:"Neo.form.field.Url",ntype:"urlfield",errorTextInputPattern:t=>"Not a valid URL",inputPattern:/^(https?:\/\/)?(([a-zA-Z0-9_-]+\.)*([a-zA-Z0-9_-]+\.[a-zA-Z]{2,}))(\/([a-zA-Z0-9._-]+)\/?)*$/,inputPatternDOM:!1,inputType:"url"}});

@@ -1,1 +1,1 @@
-import e from"./Label.mjs";class l extends e{static getConfig(){return{className:"Neo.component.BoxLabel",ntype:"box-label",cls:["neo-box-label","neo-label"]}}}Neo.applyClassConfig(l);export{l as default};
+import e from"./Label.mjs";export default Neo.setupClass(class extends e{static config={className:"Neo.component.BoxLabel",ntype:"box-label",baseCls:["neo-box-label","neo-label"]}});

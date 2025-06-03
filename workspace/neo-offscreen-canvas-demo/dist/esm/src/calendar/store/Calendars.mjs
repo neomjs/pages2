@@ -1,1 +1,1 @@
-import e from"../model/Calendar.mjs";import r from"../../../src/data/Store.mjs";class a extends r{static getConfig(){return{className:"Neo.calendar.store.Calendars",keyProperty:"id",model:e,sorters:[{property:"name",direction:"ASC"}]}}}Neo.applyClassConfig(a);export{a as default};
+import e from"../model/Calendar.mjs";import r from"../../../src/data/Store.mjs";export default Neo.setupClass(class extends r{static config={className:"Neo.calendar.store.Calendars",keyProperty:"id",model:e,sorters:[{property:"name",direction:"ASC"}]}});

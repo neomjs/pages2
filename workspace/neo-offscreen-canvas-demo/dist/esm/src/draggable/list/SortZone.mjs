@@ -1,1 +1,1 @@
-import e from"./DragZone.mjs";class s extends e{static getConfig(){return{className:"Neo.draggable.list.SortZone",ntype:"list-sortzone"}}}Neo.applyClassConfig(s);export{s as default};
+import e from"./DragZone.mjs";export default Neo.setupClass(class extends e{static config={className:"Neo.draggable.list.SortZone",ntype:"list-sortzone"}});
