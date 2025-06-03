@@ -1,0 +1,1 @@
+import e from"../../button/Base.mjs";class t extends e{static getConfig(){return{className:"Neo.grid.header.Button",ntype:"grid-header-button",cls:["neo-grid-header-button"]}}}Neo.applyClassConfig(t);export{t as default};

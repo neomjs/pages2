@@ -1,0 +1,1 @@
+import t from"../core/Base.mjs";import e from"../util/HashHistory.mjs";class s extends t{static getStaticConfig(){return{observable:!0}}static getConfig(){return{className:"Neo.controller.Base",ntype:"controller"}}constructor(t){super(t),e.on("change",this.onHashChange,this)}onHashChange(t,e){}}Neo.applyClassConfig(s);export{s as default};

@@ -1,0 +1,1 @@
+import e from"../core/Base.mjs";class l extends e{static getConfig(){return{className:"Neo.data.Model",ntype:"model",fields:null,keyProperty_:"id",storeId:null,trackModifiedFields:!1}}getField(e){let l=this,t=0,s=l.fields?.length||0;for(;t<s;t++)if(l.fields[t].name===e)return l.fields[t];return null}}Neo.applyClassConfig(l);export{l as default};

@@ -1,0 +1,1 @@
+import e from"../model/Api.mjs";import o from"../../../src/data/Store.mjs";class s extends o{static getConfig(){return{className:"Docs.app.store.Api",keyProperty:"id",model:e}}}Neo.applyClassConfig(s);export{s as default};

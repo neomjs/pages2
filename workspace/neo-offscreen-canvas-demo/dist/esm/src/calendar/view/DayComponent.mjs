@@ -1,0 +1,1 @@
+import e from"../../component/Base.mjs";const t=new Date;t.getDate(),t.getMonth(),t.getFullYear();class a extends e{static getConfig(){return{className:"Neo.calendar.view.DayComponent",cls:["neo-calendar-daycomponent"],currentDate_:null,eventStore_:null,html:"todo: Day View",owner:null,vdom:{},weekStartDay_:0}}}Neo.applyClassConfig(a);export{a as default};

@@ -1,0 +1,1 @@
+import o from"../Neo.mjs";import e from"./Base.mjs";import*as r from"../core/_export.mjs";import m from"../vdom/Helper.mjs";class s extends e{static getConfig(){return{className:"Neo.worker.VDom",singleton:!0,workerId:"vdom"}}}o.applyClassConfig(s);let t=o.create(s);o.applyToGlobalNs(t);export default t;

@@ -1,0 +1,1 @@
+import t from"./Flexbox.mjs";class e extends t{static getConfig(){return{className:"Neo.layout.HBox",ntype:"layout-hbox",direction:"row"}}applyChildAttributes(t){t.width||super.applyChildAttributes(t)}}Neo.applyClassConfig(e);export{e as default};

@@ -1,0 +1,1 @@
+import e from"./Field.mjs";class l extends e{static getConfig(){return{className:"Neo.data.field.String",ntype:"data-field-string",defaultValue:""}}beforeSetValue(e,l){let a=this,t=a.defaultValue?a.defaultValue:a.nullableValue?null:void 0;return null==e?t:String(e)}}Neo.applyClassConfig(l);export{l as default};

@@ -1,0 +1,1 @@
+import e from"../component/Base.mjs";class s extends e{static getConfig(){return{className:"Neo.grid.View",ntype:"grid-view",cls:["neo-grid-view"],_vdom:{cn:[{cls:["neo-grid-row"],cn:[]}]}}}syncVdomIds(){}}Neo.applyClassConfig(s);export{s as default};

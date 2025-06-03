@@ -1,0 +1,1 @@
+import e from"./Picker.mjs";class a extends e{static getConfig(){return{className:"Neo.form.field.trigger.Date",ntype:"trigger-date",iconCls:"fa fa-calendar-alt"}}}Neo.applyClassConfig(a);export{a as default};

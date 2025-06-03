@@ -1,0 +1,1 @@
+import t from"./Flexbox.mjs";class e extends t{static getConfig(){return{className:"Neo.layout.VBox",ntype:"layout-vbox",direction:"column"}}applyChildAttributes(t){t.height||super.applyChildAttributes(t)}}Neo.applyClassConfig(e);export{e as default};

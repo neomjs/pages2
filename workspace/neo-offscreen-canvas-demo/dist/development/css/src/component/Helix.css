@@ -2,8 +2,8 @@
   background-color: #000;
   border: 1px solid #3c3f41;
   display: flex;
+  font-family: var(--neo-font-family);
   margin: 0;
-  overflow: hidden;
   padding: 0;
   perspective: 800px;
   transform: translateZ(0px);
@@ -12,6 +12,9 @@
 }
 .neo-helix:focus {
   outline: 0;
+}
+.neo-helix.neo-follow-selection .neo-helix-item {
+  transition: all 0.1s linear;
 }
 .neo-helix.neo-transition-100 .neo-helix-item {
   transition: all 0.1s ease-in-out !important;
@@ -31,8 +34,7 @@
   transform-style: preserve-3d;
 }
 .neo-helix .surface {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   box-sizing: border-box;
   pointer-events: auto;
   position: absolute;
@@ -40,18 +42,16 @@
   transform-style: preserve-3d;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 .neo-helix .neo-helix-item {
-  -webkit-backface-visibility: visible;
-          backface-visibility: visible;
+  backface-visibility: visible;
   background-color: rgba(73, 160, 154, 0.35);
   height: 160px;
   overflow: hidden;
   width: 120px;
-  will-change: transform;
+  will-change: auto;
 }
 .neo-helix .neo-helix-item:focus {
   outline: 0;
@@ -75,4 +75,5 @@
   right: 0;
   text-shadow: 0 0 10px #61DFE5;
 }
+
 /*# sourceMappingURL=Helix.css.map */

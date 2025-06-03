@@ -1,0 +1,1 @@
+import e from"../../../src/data/Model.mjs";class a extends e{static getConfig(){return{className:"Docs.app.model.Tutorial",fields:[{name:"fileName",type:"String"},{name:"id",type:"Integer"},{name:"isLeaf",type:"Boolean"},{name:"name",type:"String"},{name:"parentId",type:"Integer"},{name:"type",type:"String"}]}}}Neo.applyClassConfig(a);export{a as default};

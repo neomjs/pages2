@@ -1,0 +1,1 @@
+import e from"../collection/Base.mjs";class t extends e{static getConfig(){return{className:"Neo.manager.Base"}}getById(e){return e&&this.get(e)||null}register(e){let t=this;t.get(e.id)?(console.log(this),Neo.logError("Trying to create an item with an already existing id",e,t.get(e.id))):t.push(e)}unregister(e){this.remove(e)}}Neo.applyClassConfig(t);export{t as default};

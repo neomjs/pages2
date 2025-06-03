@@ -1,0 +1,1 @@
+import e from"./Base.mjs";class t extends e{static getConfig(){return{className:"Neo.component.Label",ntype:"label",cls:["neo-label"],text_:"",_vdom:{tag:"label",draggable:!1}}}afterSetText(e,t){let a=this.vdom;a.html=e,this.vdom=a}}Neo.applyClassConfig(t);export{t as default};

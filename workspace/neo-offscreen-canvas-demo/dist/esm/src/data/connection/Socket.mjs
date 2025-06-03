@@ -1,0 +1,1 @@
+import e from"../../core/Base.mjs";class o extends e{static getConfig(){return{className:"Neo.data.connection.Socket",ntype:"socket-connection"}}}Neo.applyClassConfig(o);export{o as default};

@@ -19,6 +19,9 @@
   font-size: 0.625em;
   justify-content: center;
 }
+.neo-calendar-timeaxis .neo-c-w-timeaxis-item > div {
+  height: 1em;
+}
 
 .neo-timeaxis-end .neo-calendar-timeaxis {
   background-position-x: 0;
@@ -27,4 +30,5 @@
   left: unset;
   right: 0;
 }
+
 /*# sourceMappingURL=TimeAxisComponent.css.map */

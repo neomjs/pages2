@@ -1,0 +1,1 @@
+import e from"./Text.mjs";class a extends e{static getConfig(){return{className:"Neo.form.field.Email",ntype:"emailfield",inputType:"email"}}}Neo.applyClassConfig(a);export{a as default};

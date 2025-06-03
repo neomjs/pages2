@@ -1,0 +1,1 @@
+import e from"./Model.mjs";import o from"../../src/data/Store.mjs";class s extends o{static getConfig(){return{className:"Neo.menu.Store",model:e}}}Neo.applyClassConfig(s);export{s as default};

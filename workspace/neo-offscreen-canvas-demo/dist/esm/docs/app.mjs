@@ -1,0 +1,1 @@
+import o from"./app/view/MainContainer.mjs";const a=()=>Neo.app({mainView:o,name:"Docs"});export{a as onStart};

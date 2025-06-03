@@ -1,0 +1,1 @@
+import e from"./data/connection/Xhr.mjs";class o extends e{static getConfig(){return{className:"Neo.Xhr",ntype:"xhr",remote:{app:["promiseJson","promiseRequest"]},singleton:!0}}}Neo.applyClassConfig(o);let t=Neo.create(o);Neo.applyToGlobalNs(t);export default t;

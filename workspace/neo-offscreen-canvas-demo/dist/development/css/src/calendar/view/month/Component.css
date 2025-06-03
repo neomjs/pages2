@@ -55,7 +55,6 @@
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .neo-calendar-monthcomponent .neo-c-m-scrollcontainer .neo-event .neo-event-time {
@@ -78,11 +77,10 @@
 .neo-calendar-monthcomponent .neo-c-m-scrollcontainer .neo-month-header-content {
   background-color: var(--c-m-background-color);
   color: var(--c-m-year-color);
-  min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   opacity: 0;
-  padding: 0 calc(.3em / 1.6);
+  padding: 0 0.1875em;
   transition: opacity 200ms ease-in-out;
   white-space: nowrap;
 }
@@ -124,6 +122,7 @@
 .neo-calendar-monthcomponent .neo-static-header {
   color: var(--c-m-year-color);
   font-size: 1.6em;
-  padding-left: calc(.3em / 1.6);
+  padding-left: 0.1875em;
 }
+
 /*# sourceMappingURL=Component.css.map */

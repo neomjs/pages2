@@ -1,8 +1,22 @@
+.neo-table-view:focus {
+  outline: none;
+}
 .neo-table-view .neo-center {
   text-align: center;
 }
 .neo-table-view .neo-right {
   text-align: right;
+}
+.neo-table-view .neo-table-row .neo-table-cell.neo-is-modified:after {
+  border-color: transparent var(--table-cell-ismodified-color) transparent transparent;
+  border-style: solid;
+  border-width: 0 var(--table-cell-ismodified-size) var(--table-cell-ismodified-size) 0;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  width: 0;
 }
 .neo-table-view .neo-table-row:hover .neo-table-cell {
   background-color: var(--table-cell-background-color-hover);
@@ -31,20 +45,4 @@
   color: var(--table-cellrowmodel-selected-cell-color);
 }
 
-.neo-selection-cellcolumnmodel .neo-table-row:focus,
-.neo-selection-cellcolumnrowmodel .neo-table-row:focus,
-.neo-selection-cellmodel .neo-table-row:focus,
-.neo-selection-columnmodel .neo-table-row:focus,
-.neo-selection-cellrowmodel .neo-table-row:focus,
-.neo-selection-rowmodel .neo-table-row:focus {
-  outline: 0;
-}
-.neo-selection-cellcolumnmodel .neo-table-row .neo-table-cell:focus,
-.neo-selection-cellcolumnrowmodel .neo-table-row .neo-table-cell:focus,
-.neo-selection-cellmodel .neo-table-row .neo-table-cell:focus,
-.neo-selection-columnmodel .neo-table-row .neo-table-cell:focus,
-.neo-selection-cellrowmodel .neo-table-row .neo-table-cell:focus,
-.neo-selection-rowmodel .neo-table-row .neo-table-cell:focus {
-  outline: 0;
-}
 /*# sourceMappingURL=View.css.map */

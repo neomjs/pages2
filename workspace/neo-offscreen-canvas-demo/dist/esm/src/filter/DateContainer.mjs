@@ -1,0 +1,1 @@
+import e from"../form/field/Date.mjs";import t from"./NumberContainer.mjs";class a extends t{static getConfig(){return{className:"Neo.filter.DateContainer",ntype:"filter-datecontainer",fieldModule:e}}}Neo.applyClassConfig(a);export{a as default};

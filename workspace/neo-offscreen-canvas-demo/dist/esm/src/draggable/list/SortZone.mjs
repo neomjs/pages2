@@ -1,0 +1,1 @@
+import e from"./DragZone.mjs";class s extends e{static getConfig(){return{className:"Neo.draggable.list.SortZone",ntype:"list-sortzone"}}}Neo.applyClassConfig(s);export{s as default};

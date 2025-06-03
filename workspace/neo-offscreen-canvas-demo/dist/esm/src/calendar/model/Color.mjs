@@ -1,0 +1,1 @@
+import e from"../../data/Model.mjs";class a extends e{static getConfig(){return{className:"Neo.calendar.model.Color",fields:[{name:"id",type:"Integer"},{name:"name",type:"String"}]}}}Neo.applyClassConfig(a);export{a as default};

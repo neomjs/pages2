@@ -1,0 +1,1 @@
+import e from"../../core/Base.mjs";class l extends e{static getConfig(){return{className:"Neo.data.field.Field",ntype:"data-field",defaultValue:null,nullableValue:!0,value_:null}}afterSetValue(e,l){console.log("afterSetValue",e,l)}}Neo.applyClassConfig(l);export{l as default};

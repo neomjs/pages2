@@ -8,6 +8,6 @@
     ],
     "useCanvasWorker": true,
     "useFontAwesome": false,
-    "useGoogleAnalytics": true,
+    "useServiceWorker": "dist/production",
     "workerBasePath": "../../"
 }

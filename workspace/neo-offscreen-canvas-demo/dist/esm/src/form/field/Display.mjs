@@ -1,0 +1,1 @@
+import e from"./Text.mjs";class l extends e{static getConfig(){return{className:"Neo.form.field.Display",ntype:"displayfield",clearable:!1,cls:["neo-displayfield","neo-textfield"]}}constructor(e){super(e);let l=this,t=l.vdom,s=l.getInputEl();s.readonly="readonly",s.tabindex="-1",l.vdom=t}}Neo.applyClassConfig(l);export{l as default};

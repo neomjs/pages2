@@ -1,0 +1,1 @@
+import e from"./Base.mjs";class r extends e{static getConfig(){return{className:"Neo.form.field.trigger.Picker",ntype:"trigger-picker",iconCls:"fa fa-caret-down",type:"picker"}}onTriggerClick(e){this.field.onPickerTriggerClick()}}Neo.applyClassConfig(r);export{r as default};

@@ -1,9 +1,8 @@
-@charset "UTF-8";
 .neo-resizable {
   align-items: center;
   color: #bbb;
   display: flex;
-  font-family: "Font Awesome 5 Free";
+  font-family: var(--fa-style-family-classic);
   font-weight: 600;
   height: 10px;
   justify-content: center;
@@ -15,13 +14,13 @@
   width: 100%;
 }
 .neo-resizable.neo-resizable-bottom::after, .neo-resizable.neo-resizable-top::after {
-  content: "";
+  content: "\f7a4";
 }
 .neo-resizable.neo-resizable-left, .neo-resizable.neo-resizable-right {
   height: 100%;
 }
 .neo-resizable.neo-resizable-left::after, .neo-resizable.neo-resizable-right::after {
-  content: "";
+  content: "\f7a5";
 }
 .neo-resizable.neo-resizable-bottom {
   bottom: 0;
@@ -32,27 +31,24 @@
   cursor: sw-resize;
   left: 0;
   height: 1em;
-  width: 1.05em;
+  width: 1em;
 }
 .neo-resizable.neo-resizable-bottom-left::after {
-  -webkit-clip-path: polygon(100% 0, 70% 0, 70% 35%, 35% 35%, 35% 66%, 0 66%, 0 100%, 100% 100%);
-          clip-path: polygon(100% 0, 70% 0, 70% 35%, 35% 35%, 35% 66%, 0 66%, 0 100%, 100% 100%);
-  content: "";
+  content: "\f101";
   font-size: 1em;
-  transform: rotate(90deg);
+  transform: rotate(135deg);
 }
 .neo-resizable.neo-resizable-bottom-right {
   bottom: 0;
   cursor: se-resize;
   right: 0;
   height: 1em;
-  width: 1.05em;
+  width: 1em;
 }
 .neo-resizable.neo-resizable-bottom-right::after {
-  -webkit-clip-path: polygon(100% 0, 70% 0, 70% 35%, 35% 35%, 35% 66%, 0 66%, 0 100%, 100% 100%);
-          clip-path: polygon(100% 0, 70% 0, 70% 35%, 35% 35%, 35% 66%, 0 66%, 0 100%, 100% 100%);
-  content: "";
+  content: "\f101";
   font-size: 1em;
+  transform: rotate(45deg);
 }
 .neo-resizable.neo-resizable-left {
   cursor: w-resize;
@@ -71,27 +67,24 @@
   left: 0;
   top: 0;
   height: 1em;
-  width: 1.05em;
+  width: 1em;
 }
 .neo-resizable.neo-resizable-top-left::after {
-  -webkit-clip-path: polygon(100% 0, 70% 0, 70% 35%, 35% 35%, 35% 66%, 0 66%, 0 100%, 100% 100%);
-          clip-path: polygon(100% 0, 70% 0, 70% 35%, 35% 35%, 35% 66%, 0 66%, 0 100%, 100% 100%);
-  content: "";
+  content: "\f101";
   font-size: 1em;
-  transform: rotate(180deg);
+  transform: rotate(-135deg);
 }
 .neo-resizable.neo-resizable-top-right {
   cursor: ne-resize;
   right: 0;
   top: 0;
   height: 1em;
-  width: 1.05em;
+  width: 1em;
 }
 .neo-resizable.neo-resizable-top-right::after {
-  -webkit-clip-path: polygon(100% 0, 70% 0, 70% 35%, 35% 35%, 35% 66%, 0 66%, 0 100%, 100% 100%);
-          clip-path: polygon(100% 0, 70% 0, 70% 35%, 35% 35%, 35% 66%, 0 66%, 0 100%, 100% 100%);
-  content: "";
+  content: "\f101";
   font-size: 1em;
-  transform: rotate(270deg);
+  transform: rotate(-45deg);
 }
+
 /*# sourceMappingURL=Resizable.css.map */

@@ -6,33 +6,7 @@ import Base from '../../../node_modules/neo.mjs/src/core/Base.mjs';
  * @singleton
  */
 class Helper extends Base {
-    /**
-     * @member {String|null} canvasId=null
-     */
-    canvasId = null
-    /**
-     * Contains height and width properties
-     * @member {Object} canvasSize=null
-     */
-    canvasSize = null
-    /**
-     * @member {Object[]|null} data=null
-     */
-    data = null
-    /**
-     * @member {Function|null} series=null
-     */
-    series = null
-    /**
-     * @member {Function|null} xScale=null
-     */
-    xScale = null
-    /**
-     * @member {Function|null} yScale=null
-     */
-    yScale = null
-
-    static getConfig() {return {
+    static config = {
         /**
          * @member {String} className='MyApp.canvas.Helper'
          * @protected
@@ -64,13 +38,39 @@ class Helper extends Base {
          * @member {Boolean} stopAnimation_=false
          */
         stopAnimation_: false
-    }}
+    }
+
+    /**
+     * @member {String|null} canvasId=null
+     */
+    canvasId = null
+    /**
+     * Contains height and width properties
+     * @member {Object} canvasSize=null
+     */
+    canvasSize = null
+    /**
+     * @member {Object[]|null} data=null
+     */
+    data = null
+    /**
+     * @member {Function|null} series=null
+     */
+    series = null
+    /**
+     * @member {Function|null} xScale=null
+     */
+    xScale = null
+    /**
+     * @member {Function|null} yScale=null
+     */
+    yScale = null
 
     /**
      * @param {Object} config
      */
-    constructor(config) {
-        super(config);
+    construct(config) {
+        super.construct(config);
 
         let me = this;
 
@@ -85,9 +85,9 @@ class Helper extends Base {
             // we need to trigger the previously prevented logic
             if (me.canvasId) {
                 me.renderSeries(me.canvasId);
-                me.updateSize(me.canvasSize);
+                me.updateSize(me.canvasSize)
             }
-        });
+        })
     }
 
     /**
@@ -105,7 +105,7 @@ class Helper extends Base {
             me.generateSeries();
             me.renderSeries(me.canvasId, true);
 
-            me.stopAnimation = false;
+            me.stopAnimation = false
         }
     }
 
@@ -116,7 +116,7 @@ class Helper extends Base {
      */
     afterSetStopAnimation(value, oldValue) {
         if (!value && Neo.isBoolean(oldValue)) {
-            this.render();
+            this.render()
         }
     }
 
@@ -124,14 +124,14 @@ class Helper extends Base {
      * @param {Number} count
      */
     changeItemsAmount(count) {
-        this.itemsAmount = count;
+        this.itemsAmount = count
     }
 
     /**
      * @param {Boolean} enable
      */
     enableAnimation(enable) {
-        this.stopAnimation = !enable;
+        this.stopAnimation = !enable
     }
 
     /**
@@ -145,7 +145,7 @@ class Helper extends Base {
             x   : randomNormal(),
             y   : randomNormal(),
             size: randomLogNormal() * 10
-        }));
+        }))
     }
 
     /**
@@ -155,28 +155,28 @@ class Helper extends Base {
         let me         = this,
             colorScale = d3.scaleOrdinal(d3.schemeAccent),
 
-            series = fc
-                .seriesWebglPoint()
-                .xScale(me.xScale)
-                .yScale(me.yScale)
-                .crossValue(d => d.x)
-                .mainValue(d => d.y)
-                .size(d => d.size)
-                .equals(previousData => previousData.length > 0),
+        series = fc
+            .seriesWebglPoint()
+            .xScale(me.xScale)
+            .yScale(me.yScale)
+            .crossValue(d => d.x)
+            .mainValue(d => d.y)
+            .size(d => d.size)
+            .equals(previousData => previousData.length > 0),
 
-            webglColor = color => {
-                let { r, g, b, opacity } = d3.color(color).rgb();
-                return [r / 255, g / 255, b / 255, opacity];
-            },
+        webglColor = color => {
+            let { r, g, b, opacity } = d3.color(color).rgb();
+            return [r / 255, g / 255, b / 255, opacity];
+        },
 
-            fillColor = fc
-                .webglFillColor()
-                .value((d, i) => webglColor(colorScale(i)))
-                .data(me.data);
+        fillColor = fc
+            .webglFillColor()
+            .value((d, i) => webglColor(colorScale(i)))
+            .data(me.data);
 
         series.decorate(program => fillColor(program));
 
-        me.series = series;
+        me.series = series
     }
 
     /**
@@ -185,26 +185,26 @@ class Helper extends Base {
      */
     async promiseImportD3() {
         let imports = [
-                () => import('../../../node_modules/d3-array/dist/d3-array.js'),
-                () => import('../../../node_modules/d3-color/dist/d3-color.js'),
-                () => import('../../../node_modules/d3-format/dist/d3-format.js'),
-                () => import('../../../node_modules/d3-interpolate/dist/d3-interpolate.js'),
-                () => import('../../../node_modules/d3-scale-chromatic/dist/d3-scale-chromatic.js'),
-                () => import('../../../node_modules/d3-random/dist/d3-random.js'),
-                () => import('../../../node_modules/d3-scale/dist/d3-scale.js'),
-                () => import('../../../node_modules/d3-shape/dist/d3-shape.js'),
-                () => import('../../../node_modules/d3-time-format/dist/d3-time-format.js'),
-                () => import('../../../node_modules/@d3fc/d3fc-extent/build/d3fc-extent.js'),
-                () => import('../../../node_modules/@d3fc/d3fc-random-data/build/d3fc-random-data.js'),
-                () => import('../../../node_modules/@d3fc/d3fc-rebind/build/d3fc-rebind.js'),
-                () => import('../../../node_modules/@d3fc/d3fc-series/build/d3fc-series.js'),
-                () => import('../../../node_modules/@d3fc/d3fc-webgl/build/d3fc-webgl.js')
-            ],
+            () => import('../../../node_modules/d3-array/dist/d3-array.js'),
+            () => import('../../../node_modules/d3-color/dist/d3-color.js'),
+            () => import('../../../node_modules/d3-format/dist/d3-format.js'),
+            () => import('../../../node_modules/d3-interpolate/dist/d3-interpolate.js'),
+            () => import('../../../node_modules/d3-scale-chromatic/dist/d3-scale-chromatic.js'),
+            () => import('../../../node_modules/d3-random/dist/d3-random.js'),
+            () => import('../../../node_modules/d3-scale/dist/d3-scale.js'),
+            () => import('../../../node_modules/d3-shape/dist/d3-shape.js'),
+            () => import('../../../node_modules/d3-time-format/dist/d3-time-format.js'),
+            () => import('../../../node_modules/@d3fc/d3fc-extent/build/d3fc-extent.js'),
+            () => import('../../../node_modules/@d3fc/d3fc-random-data/build/d3fc-random-data.js'),
+            () => import('../../../node_modules/@d3fc/d3fc-rebind/build/d3fc-rebind.js'),
+            () => import('../../../node_modules/@d3fc/d3fc-series/build/d3fc-series.js'),
+            () => import('../../../node_modules/@d3fc/d3fc-webgl/build/d3fc-webgl.js')
+        ],
 
-            modules = [],
-            i       = 0,
-            len     = imports.length,
-            item;
+        modules = [],
+        i       = 0,
+        len     = imports.length,
+        item;
 
         for (; i < len; i++) {
             item = await imports[i]();
@@ -221,10 +221,10 @@ class Helper extends Base {
                 if (Object.keys(item).length > 0) {
                     Object.assign(self.fc, item);
                 }
-            });
+            })
         }
 
-        return Promise.resolve();
+        return Promise.resolve()
     }
 
     /**
@@ -240,7 +240,7 @@ class Helper extends Base {
 
             me.series(me.data);
 
-            requestAnimationFrame(me.render.bind(me));
+            requestAnimationFrame(me.render.bind(me))
         }
     }
 
@@ -258,7 +258,7 @@ class Helper extends Base {
             webGl = Neo.currentWorker.map[canvasId].getContext('webgl');
 
             me.series.context(webGl);
-            !silent && me.render();
+            !silent && me.render()
         }
     }
 
@@ -280,15 +280,9 @@ class Helper extends Base {
                 width : data.width
             });
 
-            webGl.viewport(0, 0, webGl.canvas.width, webGl.canvas.height);
+            webGl.viewport(0, 0, webGl.canvas.width, webGl.canvas.height)
         }
     }
 }
 
-Neo.applyClassConfig(Helper);
-
-let instance = Neo.create(Helper);
-
-Neo.applyToGlobalNs(instance);
-
-export default instance;
+export default Neo.setupClass(Helper);

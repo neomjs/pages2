@@ -1,0 +1,1 @@
+import e from"../../src/data/Model.mjs";class t extends e{static getConfig(){return{className:"Neo.menu.Model",keyProperty:"id",fields:[{name:"iconCls",type:"String"},{name:"id",type:"Integer"},{name:"items",type:"Array"},{name:"name",type:"String"}]}}}Neo.applyClassConfig(t);export{t as default};

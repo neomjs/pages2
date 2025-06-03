@@ -1,0 +1,1 @@
+import e from"../core/Base.mjs";class n extends e{static getConfig(){return{className:"Neo.plugin.Base",ntype:"plugin",owner:null}}constructor(e){super(e);let n=this;n.owner.on("mounted",n.onOwnerMounted,n)}onOwnerMounted(){}}Neo.applyClassConfig(n);export{n as default};

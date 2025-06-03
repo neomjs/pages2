@@ -1,0 +1,1 @@
+import e from"../core/Base.mjs";class t extends e{static getConfig(){return{className:"Neo.util.Css"}}static insertRules(e){Neo.main.addon.Stylesheet.insertCssRules({rules:e}).then((function(e){})).catch((function(t){console.log("App: Got error attempting to insert CSS rules",t,e)}))}}Neo.applyClassConfig(t);export default t;

@@ -1,9 +1,25 @@
+body:has(.neo-is-dragging) {
+  cursor: move !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+body:has(.neo-is-dragging) * {
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+
 .neo-dragproxy {
   pointer-events: none;
   position: absolute !important;
   transform: none !important;
   transition-duration: 0ms;
   transition-property: none;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
   will-change: left, top;
   z-index: 1000;
 }
@@ -13,12 +29,13 @@
   transition-timing-function: ease-out;
 }
 .neo-dragproxy > * {
-  height: 100% !important;
-  left: 0 !important;
-  position: relative !important;
-  opacity: 1 !important;
-  top: 0 !important;
-  transform: none !important;
-  width: 100% !important;
+  height: 100%;
+  left: 0;
+  position: relative;
+  opacity: 1;
+  top: 0;
+  transform: none;
+  width: 100%;
 }
+
 /*# sourceMappingURL=DragProxyComponent.css.map */

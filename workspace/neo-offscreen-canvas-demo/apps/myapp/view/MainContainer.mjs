@@ -1,5 +1,5 @@
 import Label          from '../../../node_modules/neo.mjs/src/component/Label.mjs';
-import Toolbar        from '../../../node_modules/neo.mjs/src/container/Toolbar.mjs';
+import Toolbar        from '../../../node_modules/neo.mjs/src/toolbar/Base.mjs';
 import Viewport       from '../../../node_modules/neo.mjs/src/container/Viewport.mjs';
 import WebGlComponent from './WebGlComponent.mjs';
 
@@ -8,7 +8,7 @@ import WebGlComponent from './WebGlComponent.mjs';
  * @extends Neo.container.Viewport
  */
 class MainContainer extends Viewport {
-    static getConfig() {return {
+    static config = {
         /**
          * @member {String} className='MyApp.view.MainContainer'
          * @protected
@@ -23,13 +23,13 @@ class MainContainer extends Viewport {
          * @member {Object} layout={ntype:'vbox',align:'stretch'}
          */
         layout: {ntype: 'vbox', align: 'stretch'}
-    }}
+    }
 
     /**
      * @param {Object} config
      */
-    constructor(config) {
-        super(config);
+    construct(config) {
+        super.construct(config);
 
         let me = this;
 
@@ -74,7 +74,7 @@ class MainContainer extends Viewport {
                 style    : {marginLeft: '2em'},
                 text     : `Time: ${me.getTime()}`
             }]
-        }];
+        }]
     }
 
     /**
@@ -88,8 +88,8 @@ class MainContainer extends Viewport {
 
         if (value) {
             setInterval(() => {
-                this.down({reference: 'time-label'}).text = `Time: ${this.getTime()}`;
-            }, 1000);
+                this.down({reference: 'time-label'}).text = `Time: ${this.getTime()}`
+            }, 1000)
         }
     }
 
@@ -103,9 +103,9 @@ class MainContainer extends Viewport {
 
         me.items[1].items.forEach(item => {
             if (item.toggleGroup === 'itemAmount') {
-                item.pressed = item.value === count;
+                item.pressed = item.value === count
             }
-        });
+        })
     }
 
     getTime() {
@@ -113,7 +113,7 @@ class MainContainer extends Viewport {
             hour  : '2-digit',
             minute: '2-digit',
             second: '2-digit'
-        });
+        })
     }
 
     /**
@@ -125,14 +125,14 @@ class MainContainer extends Viewport {
 
         if (data.component.text === 'Stop Animation') {
             buttonText      = 'Start Animation';
-            enableAnimation = false;
+            enableAnimation = false
         } else {
-            buttonText = 'Stop Animation';
+            buttonText = 'Stop Animation'
         }
 
         data.component.text = buttonText;
 
-        MyApp.canvas.Helper.enableAnimation(enableAnimation);
+        MyApp.canvas.Helper.enableAnimation(enableAnimation)
     }
 
     /**
@@ -143,10 +143,8 @@ class MainContainer extends Viewport {
             'This alert pauses the JS main thread.\n\n',
             'Notice that the time inside the bottom toolbar has stopped updating.\n\n',
             'Closing this alert will resume the main thread.'
-        ].join(''));
+        ].join(''))
     }
 }
 
-Neo.applyClassConfig(MainContainer);
-
-export {MainContainer as default};
+export default Neo.setupClass(MainContainer);

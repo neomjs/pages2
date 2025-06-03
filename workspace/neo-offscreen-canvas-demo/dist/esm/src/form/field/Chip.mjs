@@ -1,0 +1,1 @@
+import e from"./Select.mjs";class s extends e{static getConfig(){return{className:"Neo.form.field.Chip",ntype:"chipfield",listConfig:{useCheckBoxes:!0}}}}Neo.applyClassConfig(s);export{s as default};
