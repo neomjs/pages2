@@ -1,1 +1,1 @@
-{"appPath":"apps/myapp/app.mjs","basePath":"../../../../","mainPath":"../main.js","themes":["neo-theme-light"],"workerBasePath":"../../"}
+{"appPath":"apps/myapp/app.mjs","basePath":"../../../../","mainPath":"../main.js","themes":["neo-theme-light"],"useFontAwesome":false,"workerBasePath":"../../"}
