@@ -1,0 +1,10 @@
+.neo-svg-glass {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+.neo-svg-glass .custom-button {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=GlassComponent.css.map */

@@ -1,0 +1,1 @@
+import t from"../../../src/container/Viewport.mjs";import e from"./GlassComponent.mjs";export default Neo.setupClass(class extends t{static config={className:"MyApp.view.Viewport",layout:{ntype:"fit"},items:[{module:e}]}});
